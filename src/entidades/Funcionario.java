@@ -6,30 +6,32 @@ import java.util.List;
 
 import entidades.enuns.NivelFuncionario;
 
+
 public class Funcionario {
-	private String name;
+	private String nome;
 	private NivelFuncionario nivel;
 	private Double salarioBase;
 
 	private Departamento departamento;
 	private List<ContratoHora> contratos = new ArrayList<>();
 
+	
 	public Funcionario() {
-	}
-
-	public Funcionario(String name, NivelFuncionario nivel, Double salarioBase, Departamento departamento) {
-		this.name = name;
+		
+	}	
+	public Funcionario(String nome, NivelFuncionario nivel, Double salarioBase, Departamento departamento) {
+		this.nome = nome;
 		this.nivel = nivel;
 		this.salarioBase = salarioBase;
 		this.departamento = departamento;
 	}
 
-	public String getName() {
-		return name;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public NivelFuncionario getNivel() {
@@ -79,9 +81,9 @@ public class Funcionario {
 
 			int c_ano = cale.get(Calendar.YEAR);
 			int c_mes = 1 + cale.get(Calendar.MONTH);
-			 if (ano == c_ano && mes == c_mes) {
-				 soma += c.valorTotal();
-			 }
+			if (ano == c_ano && mes == c_mes) {
+				soma += c.valorTotal();
+			}
 		}
 		return soma;
 	}
