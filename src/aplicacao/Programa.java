@@ -22,7 +22,7 @@ public class Programa {
 		
 		System.out.print("Entre com o nome do departamento");
 		String nomeDepartamento = sc.nextLine();
-		System.out.println("Entre com a data do serviço");
+		System.out.println("Entre com os dados do funcionario");
 		System.out.print("Name: ");
 		String nomeFuncionario = sc.nextLine();
 		System.out.print("Nivel: ");
@@ -35,8 +35,8 @@ public class Programa {
 		System.out.println("Quantos contratos esse funcionario vai ter? ");
 		int n = sc.nextInt();
 		
-		for(int i = 1; i < n; i++) {
-			System.out.println("Entre com o ontratos: " + i + " data: ");
+		for(int i = 0; i < n; i++) {
+			System.out.println("Entre com os dados do "  + (i + 1) + "º contrato: e data: ");
 			System.out.print("Data (DD/MM/YYYY): ");
 			Date dataContrato = sdf.parse(sc.next());
 			System.out.print("Valor por Hora: ");
